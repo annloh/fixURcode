@@ -37,3 +37,11 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+#logs
+*.log
+
+#Some temp folders
+/coming_soon/
+/buggy_code/
+

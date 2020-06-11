@@ -1,0 +1,36 @@
+# Object properties
+
+If your code does not work as expected you might want to take a closer look at certain objects and inspect their properties.  
+The following functions come in handy:
+
+## The nature of an object
+
+`str()`
+
+`dplyr::glimpse()`
+
+`class()`
+
+`typeof()`
+
+## Object attributes
+
+`names()`
+
+## Object size
+
+`length()`
+
+`dim()`
+
+## Look at objects
+
+`print()`
+
+`View()`
+
+`head()`
+
+## Compare objects
+
+`identical()`

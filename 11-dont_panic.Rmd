@@ -1,0 +1,26 @@
+# Getting frustrated?
+
+- Are you trying the same thing for the third time?
+- You can't remember which of the 20 open tabs you have already tried?
+- Hitting your computer or cursing at the screen?
+- Randomly changing stuff?
+- Copy and paste cryptic code snippets from stack overflow?
+
+
+
+- Take a deep breath!
+- Remind yourself that computers are completely rational.
+Noone is out there to get you! There is a logical reason! 
+It didn't just magically break!
+
+![https://www.freecodecamp.org/news/content/images/2019/07/that-string-secretly-became-a-number.jpeg](img/that-string-secretly-became-a-number.jpeg){ width=50% }
+
+- Be determined to understand the problem.
+- Embrace the challenge and the learning experience!
+- Take a break!
+
+![https://www.monkeyuser.com/2018/debugging/](img/toilet-debugging.png){ width=60% }
+
+
+
+

@@ -1,0 +1,54 @@
+# Check the function code
+
+If you have consulted the documentation and the internet and still have no 
+idea why your code is not doing what you expect it to do it can be 
+helpful to check the function definition.
+
+You can get the code of a given function in different ways. 
+- Click on the function name while pressing shift. 
+- Typing an empty function call in the console
+
+There are a few things that have to be kept in mind:  
+(1) The package containing the function has to be loaded.  
+(2) The function you would like to explore is exported by that package.  
+(3) It is not a generic method.  
+
+(2) can be solved by adding `packagename:::` in front of the function call.
+That way you can also explore functions that are not exported by a package.
+
+(3) Can be solved by addding the class after of the generic function.
+So if you would like to explore the `plot` method of the `bootnet` package, 
+you would have to call it as `plot.bootnet()` in order so see the definition.
+
+## S3 and Debugging
+- `UseMethod` errors are highly uninformative
+- The corresponding functions are called `<function.class>` or 
+- `<function.default>`
+- Use `methods()` to see what methods are associated with a function or class
+
+```{r eval = FALSE, include = TRUE}
+# install.packages("bootnet")
+library(bootnet)
+
+bootnet::plot.bootnet()
+
+# Get everything with a print method
+methods(print)
+
+# Get all methods for objects of class "bootnet"
+methods(class = "bootnet")
+```
+
+Print the function code to console by calling the function without parameters and without parenthesis.
+```{r eval = FALSE, include = TRUE}
+bootnet::bootnet
+```
+
+Press ctrl + left mouse click on the function name to view the function definition. If you defined the function the .R file containing the function definition will open. If the function is from a package the function code will show in a new tab.
+
+```{r eval=FALSE, include=TRUE}
+# Ctrl + mouse click opens function definition
+reverseLetters()
+bootnet::plot.bootnet()
+```
+

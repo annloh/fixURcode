@@ -1,0 +1,13 @@
+# Use Git!
+
+- Create a bugfix branch (or two or three if you try more complex approaches)
+- You can easily get back to your starting point
+- Consider keeping the branch with a failed attempt it might be close to the truth
+- You don't create new problems by forgetting to change something back in some remote part of the code that turned out to not work
+
+![https://xkcd.com/1739/](img/fixing_problems.png){ width=50% }
+
+- You can keep track of what you already tried
+- If an attempt almost got you there and you discover the one thing that was 
+missing three hours later you can easily recreate that "95% good" state
+- When you fixed the problem you can analyse the solution by looking at what exactly was changed

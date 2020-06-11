@@ -1,0 +1,21 @@
+# Most common error sources
+
+In no particular order these are the most frequent reasons something goes 
+wrong in my code:
+
+- The object is of the wrong type (i.e. a matrix instead of a data.frame or the other way round)
+- The object should have names but doesn't.
+- I forgot to turn of `stringsaAsFactors = TRUE` 
+(Problem of the past with R 4.0).
+- Some object does not exist (typo or silent error in earlier code).
+- A `(`, `{`, `,`, `"`   is missing or misplaced.
+- I copy & pasted code from the web and some weird special characters are used instead of the standard ones R would like
+- An object from the environment is used instead of a function parameter.
+- The object you are looking for is at a different level of a nested list.
+- The method can't handle missing data.
+- A namespace conflict calls the wrong function.  
+- A package update broke some function.
+
+> Tipp: 
+When copy & pasting stuff paste it in a text editor first to 
+avoid weird non-code symbols.

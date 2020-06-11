@@ -1,0 +1,9 @@
+# Don't assume anything!
+
+- Check the variable or file names.
+- Check the object content and type.
+- Check code that you think was working fine just a minute ago and you are certain you haven't touched.
+- Check whether the online example you modeled your code after actually works.
+- Check your environment
+- Check the function documentation, whether it really works the way you thought it would.
+- Write a test to confirm expected behaviour.

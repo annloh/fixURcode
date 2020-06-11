@@ -1,0 +1,13 @@
+# It works again?
+
+- A cryptic stack overflow post fixed it?
+- You made some random changes?
+
+![https://wyncode.co/funniest-computer-programming-memes/](img/why.jpg){ width=60% }
+
+
+
+Take the time to figure out *why* these fixes work and try making a note what 
+the solution was. Chances are you'll break it again or run into the 
+same error later in your code.
+

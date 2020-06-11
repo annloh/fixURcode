@@ -1,0 +1,620 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={fixURcode},
+            pdfauthor={Anna Lohmann},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{booktabs}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{fixURcode}
+\author{Anna Lohmann}
+\date{2020-06-10}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{eat-sleep-debug-repeat}{%
+\chapter{eat(), sleep(), debug(), repeat()}\label{eat-sleep-debug-repeat}}
+
+\includegraphics[width=0.5\textwidth,height=\textheight]{img/invite.png}
+
+\hypertarget{error-messages}{%
+\chapter{Error messages}\label{error-messages}}
+
+The very obvious first step when your code is not working:
+Read the error message. If that does not help. \emph{Read it again.}
+Often you can also google the error message.
+If you do so try eliminating the parts that seem unique to your own code (e.g.~specific dimensions, object names,\ldots{})
+
+\textbf{Pro Tip} (for new or niche packages):
+
+If google won't find the error try \emph{github}.
+You might find the error in the package code or in a github issue.
+
+\hypertarget{decifer-the-error-message}{%
+\section{Decifer the error message}\label{decifer-the-error-message}}
+
+Asking yourself the following question can help decifer the error message:
+
+\begin{itemize}
+\tightlist
+\item
+  What object is the error message referring to?\\
+\item
+  What property of the object might be causing the error?\\
+  Is the object
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \ldots{} missing?\\
+  \item
+    \ldots{} of the wrong type?\\
+  \item
+    \ldots{} the wrong size?\\
+  \item
+    \ldots{} wrong content?\\
+  \item
+    \ldots{} misspelled?
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{code-doesnt-work-without-errors}{%
+\section{Code doesn't work without errors}\label{code-doesnt-work-without-errors}}
+
+\hypertarget{raise-warnings-or-messages-to-errors}{%
+\subsection{Raise warnings or messages to errors}\label{raise-warnings-or-messages-to-errors}}
+
+You can turn warnings and messages into errors with the foolowing code:
+\texttt{options(warn\ =\ 2)}
+
+Promote messages to errors:\\
+\texttt{rlang::with\_abort(f(),\ "message")}
+
+\hypertarget{no-visible-warnings-or-messages}{%
+\subsection{No visible warnings or messages}\label{no-visible-warnings-or-messages}}
+
+If the malfunctioning code does not produce any errors or warnings check the documentation to see whether some warnings or error messages are turned off by default.
+Often this is some form of \texttt{print\ =\ FALSE}, \texttt{verbose\ =\ FALSE} or \texttt{silent\ =\ TRUE}.
+
+\hypertarget{dont-assume-anything}{%
+\chapter{Don't assume anything!}\label{dont-assume-anything}}
+
+\begin{itemize}
+\tightlist
+\item
+  Check the variable or file names.
+\item
+  Check the object content and type.
+\item
+  Check code that you think was working fine just a minute ago and you are certain you haven't touched.
+\item
+  Check whether the online example you modeled your code after actually works.
+\item
+  Check the function documentation, whether it really works the way you thought it would.
+\item
+  Write a test to confirm expected behaviour.
+\end{itemize}
+
+\hypertarget{read-the-documentation}{%
+\chapter{Read the documentation}\label{read-the-documentation}}
+
+Reading documentation is a learned skill.
+It doesn't come naturally and take a lot of time to master.
+This is not always the user's fault.
+Also writing documentation is a skill that not all package developers master equally well.
+
+Try always looking for the following elements when reading documentations.
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\tightlist
+\item
+  What arguments does the function take?
+\item
+  Which of those arguments have to be provided?
+\item
+  If they don't have to be provided is the default what I want?
+\item
+  Which object types and dimensions should the input have?
+\item
+  Does the input have to be named?
+\end{enumerate}
+
+If the documentation is unclear in these regards try inferring some of the
+information from examples or a package vignette.
+
+If the information on a specific package is scarce.
+Try the github search to see it in action.
+
+\hypertarget{most-common-error-sources}{%
+\chapter{Most common error sources}\label{most-common-error-sources}}
+
+In no particular order these are the most important reasons something goes
+wrong in my code:
+
+\begin{itemize}
+\tightlist
+\item
+  The object is of the wrong type (i.e.~a matrix instead of a data.frame or the other way round)
+\item
+  The object should have names but doesn't.
+\item
+  I forgot to turn of \texttt{stringsaAsFactors\ =\ TRUE}
+  (Problem of the past with R 4.0).
+\item
+  Some object does not exist (typo or silent error in earlier code).
+\item
+  A \texttt{(}, \texttt{\{}, \texttt{,}, \texttt{"} is missing or misplaced.
+\item
+  An object from the environment is used instead of a function parameter.
+\item
+  The object you are looking for is at a different level of a nested list.
+\item
+  The method can't handle missing data.
+\item
+  A namespace conflict calls the wrong function.
+\end{itemize}
+
+Tipp:
+When copy \& paste stuff paste it in a text editor first to
+avoid weird non-code symbols.
+
+\hypertarget{check-the-function-code}{%
+\chapter{Check the function code}\label{check-the-function-code}}
+
+If you have consulted the documentation and the internet and still have no
+idea why your code is not doing what you expect it to do it can be
+helpful to check the function definition.
+
+You can get the code of a given function in different ways.
+- Click on the function name while pressing shift.
+- Typing an empty function call in the console
+
+There are a few things that have to be kept in mind:
+(1) The package containing the function has to be loaded.
+(2) The function you would like to explore is exported by that package.
+(3) It is not a generic method.
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{1}
+\item
+  can be solved by adding \texttt{packagename::} in front of the function call.
+  That way you can also explore functions that are not exported by a package.
+\item
+  Can be solved by addding the class in front of the generic function.
+  So if you would like to explore the plot method of the bootnet package,
+  you would have to call it as \texttt{plot.bootnet()} in order so see the definition.
+\end{enumerate}
+
+\hypertarget{s3-and-debugging}{%
+\section{S3 and Debugging}\label{s3-and-debugging}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{UseMethod} errors
+\item
+  The corresponding functions are called \texttt{\textless{}function.class\textgreater{}} or
+\item
+  \texttt{\textless{}function.default\textgreater{}}
+\item
+  Use methods() to see what methods are associated with a function or class
+\end{itemize}
+
+Press ctrl + left mouse click on the function name to view the function definition
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{reverseLetters}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{object-properties}{%
+\chapter{Object properties}\label{object-properties}}
+
+\texttt{str()}
+
+\texttt{dplyr::glimpse()}
+
+\texttt{class()}
+
+\texttt{typeof()}
+
+\texttt{names()}
+
+\texttt{length()}
+
+\texttt{dim()}
+
+\texttt{print()}
+
+\texttt{View()}
+
+\texttt{head()}
+
+\texttt{identical()}
+
+\hypertarget{debugging-strategies}{%
+\chapter{Debugging strategies}\label{debugging-strategies}}
+
+\hypertarget{isolate-the-problem}{%
+\section{Isolate the problem}\label{isolate-the-problem}}
+
+\hypertarget{minimum-working-example}{%
+\subsection{Minimum working example}\label{minimum-working-example}}
+
+\begin{itemize}
+\tightlist
+\item
+  Remove as much code as possible but have the problem still occurring.
+\item
+  Locate the source of the error.
+\item
+  Change one thing at a time.
+\end{itemize}
+
+\hypertarget{line-by-line-debugging-stepping-through-the-code}{%
+\section{Line-by-line debugging (Stepping through the code)}\label{line-by-line-debugging-stepping-through-the-code}}
+
+\begin{itemize}
+\tightlist
+\item
+  Run the code line by line
+\end{itemize}
+
+\hypertarget{rubber-duck-debugging}{%
+\section{Rubber duck debugging}\label{rubber-duck-debugging}}
+
+Talk yourself through the code. (Or explain it to your rubber duck.)
+
+\hypertarget{print-debugging}{%
+\section{Print debugging}\label{print-debugging}}
+
+The idea of print debugging is to print certain objects or object properties
+close to where you expect the error might occur.
+Printing might show you that an object has differetn properties from what you
+would expect it to have or figure our in which iteration or with which seed
+something might break.
+This is a quick and dirty option to the more elaborate debugging tools.
+
+\hypertarget{logging}{%
+\section{Logging}\label{logging}}
+
+\hypertarget{debugging-tools}{%
+\chapter{Debugging tools}\label{debugging-tools}}
+
+\hypertarget{interactive-r-session}{%
+\subsection{Interactive R session}\label{interactive-r-session}}
+
+\begin{itemize}
+\tightlist
+\item
+  R session reacts to user input
+\item
+  Check with \texttt{interactive()}
+\end{itemize}
+
+\hypertarget{step-through-the-code---debug}{%
+\subsection{\texorpdfstring{Step through the code - \texttt{debug()}}{Step through the code - debug()}}\label{step-through-the-code---debug}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{debug(my\_defunct\_function)}
+\item
+  Call exported functions from a package with \texttt{::}
+\item
+  Unexported functions can be referred to with \texttt{:::}
+\end{itemize}
+
+R will switch to the browser mode every time that function is called from anywhere in R.
+
+You have to tell R to stop debugging \texttt{undebug(my\_defunct\_function)} or overwrite the function (e.g.~by sourcing it).
+\texttt{debugonce(my\_defunct\_function)} will go in browse mode the next time the function is called.
+
+\hypertarget{browser}{%
+\subsection{browser()}\label{browser}}
+
+\begin{itemize}
+\tightlist
+\item
+  Enter browse() anywhere in your code where you want the execution to halt.
+\item
+  You can then inspect the environment at that state.
+\item
+  You can also change objects and continue.
+\item
+  You can also use \texttt{browser()} as an error handler.
+\end{itemize}
+
+\texttt{Browse{[}number{]}} The number tells you at which level of the call stack you are.
+
+\hypertarget{breakpoints}{%
+\subsection{Breakpoints}\label{breakpoints}}
+
+\begin{itemize}
+\tightlist
+\item
+  Does the same as ``browse()'' but without lottering your code.
+\item
+  Click left of a line number for a dot to appear.
+\item
+  Next time you run the code it will stop there.
+\item
+  \texttt{options(error\ =\ recover)} automatically switches to browsing when an error occurs
+\end{itemize}
+
+\hypertarget{traceback}{%
+\subsection{traceback()}\label{traceback}}
+
+\begin{itemize}
+\tightlist
+\item
+  Helps locating the problem.
+\item
+  Shows you the last commands that have been called before the error occured (i.e.~the stack).
+\item
+  Reverse order, latest command is on top.
+\end{itemize}
+
+\texttt{rlang::last\_trace()} is ordered in the opposite way to \texttt{traceback()}
+
+\hypertarget{debugging-other-peoples-code}{%
+\section{Debugging other people's code}\label{debugging-other-peoples-code}}
+
+\hypertarget{ask-a-peer}{%
+\chapter{Ask a peer}\label{ask-a-peer}}
+
+Sometimes you are so entangled in your code that you cant see the forest for the trees.
+What has kept you stuck for days can often be solved within minutes by a fresh pair of eyes.
+And even if the peer can't sove your problem.
+The process of walking someone else through it might make you come up with a solution yourself.
+
+Don't assume your error is embarrassing.
+If it is, your peer will find and fix it within seconds.
+If it isn't you can both learn from it.
+
+\hypertarget{it-works-again---great-do-you-know-why}{%
+\chapter{It works again? - Great, do you know why?}\label{it-works-again---great-do-you-know-why}}
+
+\begin{itemize}
+\tightlist
+\item
+  A random stacl overflow post fixed it?
+\item
+  You made some random changes?
+\end{itemize}
+
+Take the time to figure out why these fixes work and try making a note what
+the solution was. Chances are you'll break it again or run into the
+same error later in your code.
+
+\hypertarget{use-git}{%
+\chapter{Use Git!}\label{use-git}}
+
+\begin{itemize}
+\tightlist
+\item
+  Create a bugfix branch (or two or three if you try more complex approaches)
+\item
+  You can easily get back to your starting point
+\item
+  You don't create new problems by forgetting to change something back in some remote part of the code
+  that turned out to not work
+\item
+  You can keep track of what you already tried
+\item
+  If an attempt almost got you there and you discover the one thing that was
+  missing three hours later you can easily recreate that ``95\% good'' state
+\item
+  When you fixed the problem you can analyse the solution by looking at what exactly was changed
+\end{itemize}
+
+\hypertarget{error-handling}{%
+\chapter{Error handling}\label{error-handling}}
+
+Buiding error handling into your own code can get messy really fast.
+Just returning an error message or continuing a loop even when one iteration fails
+is easy.
+But as soon as you want to adapt behaviour depending on error or save the error messages,
+things get messy.
+
+This is not always your fault, but sometimes due to messy error documentation of the package developer.
+
+\hypertarget{unit-tests-with-testthat}{%
+\chapter{\texorpdfstring{Unit tests with \texttt{testthat}}{Unit tests with testthat}}\label{unit-tests-with-testthat}}
+
+Idea:
+- You are working with a package
+- The test live in a separate folder \texttt{tests/testthat/}
+- Testing is part of your workflow.
+
+Easy examples for tests:
+- \texttt{expect\_error()} the code should throw an error
+- \texttt{expect\_warning()} the code should throw a warning
+- \texttt{expect\_equal(a,\ b)} a and b should be the same (up to numeric tolerance)
+- \texttt{expect\_equivalent(a,\ b)} a and b should contain the same values but may have different attributes (e.g., names and dimnames)
+
+If you are not working with a package check out:
+
+\hypertarget{resources}{%
+\chapter{Resources}\label{resources}}
+
+\hypertarget{debugging-with-rstudio---jonathan-mcpherson}{%
+\subsection{Debugging with RStudio - Jonathan McPherson}\label{debugging-with-rstudio---jonathan-mcpherson}}
+
+\url{https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio}
+
+\hypertarget{advanced-r---hadley-wickham-chapter-22-debugging}{%
+\subsection{Advanced R - Hadley Wickham (Chapter 22 Debugging)}\label{advanced-r---hadley-wickham-chapter-22-debugging}}
+
+\url{https://adv-r.hadley.nz/debugging.html}
+
+\hypertarget{what-they-forgot-to-teach-you-about-r---jennifer-bryan-jim-hester}{%
+\subsection{What They Forgot to Teach You About R - Jennifer Bryan, Jim Hester}\label{what-they-forgot-to-teach-you-about-r---jennifer-bryan-jim-hester}}
+
+\url{https://rstats.wtf/debugging-r-code.html}
+
+\hypertarget{toy-examples-to-test-your-debugging-skills}{%
+\subsection{Toy examples to test your debugging skills}\label{toy-examples-to-test-your-debugging-skills}}
+
+rstd.io/wtf-debugging
+
+\hypertarget{error-handling-1}{%
+\subsection{Error handling}\label{error-handling-1}}
+
+\hypertarget{unit-tests}{%
+\subsection{Unit tests}\label{unit-tests}}
+
+Advanced R - Hadley Wickham (Chapter Tests)
+\url{http://r-pkgs.had.co.nz/tests.html}
+
+\hypertarget{getting-frustrated}{%
+\chapter{Getting frustrated?}\label{getting-frustrated}}
+
+\begin{itemize}
+\item
+  Are you trying the same thing for the third time?
+\item
+  You can't remember which of the 20 open tabs you have already tried?
+\item
+  Hitting your computer or cursing at the screen?
+\item
+  Randomly changing stuff?
+\item
+  Copy and paste cryptic code snippets from stack overflow?
+\item
+  Take a deep breath!
+\item
+  Remind yourself that computers are completely rational.
+  Noone is out there to get you! There is a logical reason!
+  It didn't just magically break!
+\item
+  Take a break!
+\item
+  Be determined to understand the problem.
+\item
+  Embrace the challenge and the learning experience!
+\end{itemize}
+
+\hypertarget{buggy-code-to-test}{%
+\chapter{Buggy code to test}\label{buggy-code-to-test}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{usethis}\OperatorTok{::}\KeywordTok{use_course}\NormalTok{(}\StringTok{"rstd.io/wtf-debugging"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\bibliography{book.bib}
+
+\end{document}

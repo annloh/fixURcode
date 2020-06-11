@@ -1,0 +1,54 @@
+# Error messages
+
+## Read the error message 
+
+The very obvious first step when your code is not working:
+Read the error message. If that does not help. *Read it again.*
+
+
+### Decifer the error message
+
+Asking yourself the following question can help decifer the error message:  
+
+- What object is the error message referring to?  
+- What property of the object might be causing the error?  
+  Is the object   
+  * ... missing?  
+  * ... of the wrong type?  
+  * ... the wrong size?  
+  * ... wrong content?  
+  * ... misspelled?   
+
+## Google the error
+
+Often you can also google the error. 
+Eliminate the parts that seem unique to your own code (e.g. specific dimensions, object names,...)
+
+![https://xkcd.com/979/](img/wisdom_of_the_ancients.png){ width=60% }
+
+
+>Pro Tip (for new or niche packages):  
+If google won't find the error try *github*.
+You might find the error in the package code or in a github issue.
+
+## Nonfuctional code but no errors
+
+### Raise warnings or messages to errors
+
+You can turn warnings and messages into errors with the foolowing code:  
+`options(warn = 2)`
+
+Promote messages to errors:  
+`rlang::with_abort(f(), "message")`
+
+### No visible warnings or messages  
+
+If the malfunctioning code does not produce any errors or warnings check the documentation to see whether some warnings or error messages are turned off by default.
+Often this is some form of `print = FALSE`, `verbose = FALSE` or `silent = TRUE`.
+
+
+
+
+
+
+

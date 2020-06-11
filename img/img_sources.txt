@@ -1,0 +1,39 @@
+# Debugging image urls
+
+Chuck norris
+https://i.redd.it/oyov9xsfx98y.jpg
+
+Brain sleep
+https://starecat.com/brain-hey-youre-going-to-sleep-yes-now-shut-up-i-think-i-figuerd-out-how-to-debug-your-program-comic/
+
+Root cause
+https://www.monkeyuser.com/2018/root-cause/
+
+toilet
+https://www.monkeyuser.com/2018/debugging/
+
+step by step debugging
+https://www.monkeyuser.com/2017/step-by-step-debugging/
+
+fixing problems
+https://xkcd.com/1739/
+
+mystery
+https://twitter.com/DevOpsSchools/status/1230195531927949313/photo/1
+
+new error
+http://www.quickmeme.com/p/3vmpcs
+
+
+why
+https://wyncode.co/funniest-computer-programming-memes/
+
+google no answer
+https://xkcd.com/979/
+
+string secret number
+https://www.freecodecamp.org/news/content/images/2019/07/that-string-secretly-became-a-number.jpeg
+
+
+
+

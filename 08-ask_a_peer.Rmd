@@ -1,0 +1,6 @@
+# Ask a peer
+
+Sometimes you are so entangled in your code that you cant see the forest for the trees.
+What has kept you stuck for days can often be solved within minutes by a fresh pair of eyes.
+And even if the peer can't sove your problem; 
+the process of walking them through it might make you come up with a solution yourself.

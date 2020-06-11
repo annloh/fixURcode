@@ -1,0 +1,32 @@
+# Debugging strategies
+
+## Isolate the problem
+
+### Minimum working example
+- Remove as much code as possible but have the problem still occurring. 
+- Locate the source of the error.
+- Change one thing at a time.
+
+## Line-by-line debugging (Stepping through the code)
+- Run the code line by line
+- Manual version of `debug()`
+
+## Rubber duck debugging
+Talk yourself through the code. (Or explain it to your rubber duck.)
+
+
+## Print debugging
+
+The idea of print debugging is to print certain objects or object properties 
+close to where you expect the error might occur.
+Printing might show you that an object has different properties from what you 
+would expect it to have or figure our in which iteration or with which seed 
+something might break. 
+This is a quick and dirty option to the more elaborate debugging tools `browser()` or using a break point.
+
+## Logging
+
+Similar to print debugging you might want to print a `message()` or `cat()`
+or use a logger to record how far your code came.
+Especially, when using a lot of loops it might be useful to know which iteration caused the error.
+

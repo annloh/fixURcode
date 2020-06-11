@@ -1,0 +1,16 @@
+# Resources
+
+### Debugging with RStudio - Jonathan McPherson   
+https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio  
+
+### Advanced R - Hadley Wickham (Chapter 22 Debugging) 
+https://adv-r.hadley.nz/debugging.html
+
+### What They Forgot to Teach You About R - Jennifer Bryan, Jim Hester
+https://rstats.wtf/debugging-r-code.html  
+
+### Toy examples to test your debugging skills
+rstd.io/wtf-debugging
+
+
+
