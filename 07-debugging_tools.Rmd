@@ -1,5 +1,8 @@
+<!-- HTML comment -->
+<!-- ![url](img/path){ width=70% } -->
+
 # Debugging tools
-![https://i.redd.it/oyov9xsfx98y.jpg](img/chuck_norris.jpg){ width=70% }
+![https://i.redd.it/oyov9xsfx98y.jpg](img/chuck_norris.jpg){ width=50% }
 
 RStudio comes with a number of useful build in debugging tools.
 You can use them in a interactive R session i.e. you can interact with your code while it is being executed.
@@ -36,6 +39,16 @@ You can use them in a interactive R session i.e. you can interact with your code
 - Click left of a line number for a dot to appear.  
 - Next time you run the code it will stop there.
 - You can explore and change the current state.
+
+
+[Code example from https://raw.githubusercontent.com/theavanrossum/debuggerRMarkdownLesson/master/crazify.R]
+
+![](img/breakpoint.PNG){ width=70% }
+![](img/console_breakpoint.PNG){ width=70% }
+![](img/stack.PNG){ width=70% }
+
+
+
 
 ### `traceback()`
 

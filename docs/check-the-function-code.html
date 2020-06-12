@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Check the function code | fixURcode</title>
   <meta name="description" content="This is an R tutorial on error handling, debbugging and automated testing." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Check the function code | fixURcode" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Anna Lohmann" />
 
 
-<meta name="date" content="2020-06-11" />
+<meta name="date" content="2020-06-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -69,7 +69,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -228,23 +228,25 @@ you would have to call it as <code>plot.bootnet()</code> in order so see the def
 <li><code>&lt;function.default&gt;</code></li>
 <li>Use <code>methods()</code> to see what methods are associated with a function or class</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># install.packages(&quot;bootnet&quot;)</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(bootnet)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">bootnet<span class="op">::</span><span class="kw">plot.bootnet</span>()</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co"># Get everything with a print method</span></a>
-<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="kw">methods</span>(print)</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co"># Get all methods for objects of class &quot;bootnet&quot;</span></a>
-<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="kw">methods</span>(<span class="dt">class =</span> <span class="st">&quot;bootnet&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># install.packages(&quot;bootnet&quot;)</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">library</span>(bootnet)</a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4">bootnet<span class="op">::</span><span class="kw">plot.bootnet</span>()</a>
+<a class="sourceLine" id="cb1-5" title="5"></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="co"># Get everything with a print method</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="kw">methods</span>(print)</a>
+<a class="sourceLine" id="cb1-8" title="8"></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="co"># Get all methods for objects of class &quot;bootnet&quot;</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="kw">methods</span>(<span class="dt">class =</span> <span class="st">&quot;bootnet&quot;</span>)</a></code></pre></div>
 <p>Print the function code to console by calling the function without parameters and without parenthesis.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">bootnet<span class="op">::</span>bootnet</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">bootnet<span class="op">::</span>bootnet</a></code></pre></div>
 <p>Press ctrl + left mouse click on the function name to view the function definition. If you defined the function the .R file containing the function definition will open. If the function is from a package the function code will show in a new tab.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># Ctrl + mouse click opens function definition</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">reverseLetters</span>()</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">bootnet<span class="op">::</span><span class="kw">plot.bootnet</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># Ctrl + mouse click opens function definition</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="kw">reverseLetters</span>()</a>
+<a class="sourceLine" id="cb3-3" title="3">bootnet<span class="op">::</span><span class="kw">plot.bootnet</span>()</a></code></pre></div>
 
+<!-- HTML comment -->
+<!-- ![url](img/path){ width=70% } -->
 </div>
 </div>
             </section>

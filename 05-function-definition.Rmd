@@ -1,3 +1,6 @@
+<!-- HTML comment -->
+<!-- ![url](img/path){ width=70% } -->
+
 # Check the function code
 
 If you have consulted the documentation and the internet and still have no 

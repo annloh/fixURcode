@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9 Debugging tools | fixURcode</title>
   <meta name="description" content="This is an R tutorial on error handling, debbugging and automated testing." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9 Debugging tools | fixURcode" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Anna Lohmann" />
 
 
-<meta name="date" content="2020-06-11" />
+<meta name="date" content="2020-06-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -69,7 +69,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -204,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="debugging-tools" class="section level1">
 <h1><span class="header-section-number">9</span> Debugging tools</h1>
 <div class="figure">
-<img src="img/chuck_norris.jpg" alt="https://i.redd.it/oyov9xsfx98y.jpg" style="width:70.0%" />
+<img src="img/chuck_norris.jpg" alt="https://i.redd.it/oyov9xsfx98y.jpg" style="width:50.0%" />
 <p class="caption"><a href="https://i.redd.it/oyov9xsfx98y.jpg" class="uri">https://i.redd.it/oyov9xsfx98y.jpg</a></p>
 </div>
 <p>RStudio comes with a number of useful build in debugging tools.
@@ -253,21 +253,28 @@ You can use them in a interactive R session i.e. you can interact with your cod
 <div id="breakpoints" class="section level3">
 <h3><span class="header-section-number">9.0.4</span> Breakpoints</h3>
 <ul>
-<li>Does the same as “browser()” but without littering your code.</li>
+<li>Does the same as <code>browser()</code> but without littering your code.</li>
 <li>Click left of a line number for a dot to appear.<br />
 </li>
 <li>Next time you run the code it will stop there.</li>
+<li>You can explore and change the current state.</li>
 </ul>
+<p>[Code example from <a href="https://raw.githubusercontent.com/theavanrossum/debuggerRMarkdownLesson/master/crazify.R" class="uri">https://raw.githubusercontent.com/theavanrossum/debuggerRMarkdownLesson/master/crazify.R</a>]</p>
+<p><img src="img/breakpoint.PNG" style="width:70.0%" />
+<img src="img/console_breakpoint.PNG" style="width:70.0%" />
+<img src="img/stack.PNG" style="width:70.0%" /></p>
 </div>
 <div id="traceback" class="section level3">
 <h3><span class="header-section-number">9.0.5</span> <code>traceback()</code></h3>
 <ul>
-<li>Helps locating the problem.</li>
 <li>Shows you the last commands that have been called before the error occured (i.e. the stack).</li>
+<li>Helps locating the problem.</li>
 <li>Reverse order, latest command is on top.</li>
 <li><code>rlang::last_trace()</code> is ordered in the opposite way to <code>traceback()</code></li>
 </ul>
 
+<!-- HTML comment -->
+<!-- ![url](img/path){ width=70% } -->
 </div>
 </div>
             </section>

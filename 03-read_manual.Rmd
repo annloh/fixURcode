@@ -1,3 +1,6 @@
+<!-- HTML comment -->
+<!-- ![url](img/path){ width=70% } -->
+
 # Read the documentation
 
 Reading documentation is a learned skill. 

@@ -1,3 +1,6 @@
+<!-- HTML comment -->
+<!-- ![url](img/path){ width=70% } -->
+
 # Use Git!
 
 - Create a bugfix branch (or two or three if you try more complex approaches)

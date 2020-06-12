@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Error messages | fixURcode</title>
   <meta name="description" content="This is an R tutorial on error handling, debbugging and automated testing." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Error messages | fixURcode" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Anna Lohmann" />
 
 
-<meta name="date" content="2020-06-11" />
+<meta name="date" content="2020-06-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -69,7 +69,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -250,13 +250,15 @@ You might find the error in the package code or in a github issue.</p>
 <p>You can turn warnings and messages into errors with the foolowing code:<br />
 <code>options(warn = 2)</code></p>
 <p>Promote messages to errors:<br />
-<code>rlang::with_abort(f(), &quot;message&quot;)</code></p>
+<code>rlang::with_abort(f(), "message")</code></p>
 </div>
 <div id="no-visible-warnings-or-messages" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> No visible warnings or messages</h3>
 <p>If the malfunctioning code does not produce any errors or warnings check the documentation to see whether some warnings or error messages are turned off by default.
 Often this is some form of <code>print = FALSE</code>, <code>verbose = FALSE</code> or <code>silent = TRUE</code>.</p>
 
+<!-- HTML comment -->
+<!-- ![url](img/path){ width=70% } -->
 </div>
 </div>
 </div>

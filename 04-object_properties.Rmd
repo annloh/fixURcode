@@ -1,3 +1,6 @@
+<!-- HTML comment -->
+<!-- ![url](img/path){ width=70% } -->
+
 # Object properties
 
 If your code does not work as expected you might want to take a closer look at certain objects and inspect their properties.  
