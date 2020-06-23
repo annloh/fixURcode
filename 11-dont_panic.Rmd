@@ -13,7 +13,7 @@
 
 - Take a deep breath!
 - Remind yourself that computers are completely rational.
-Noone is out there to get you! There is a logical reason! 
+No one is out there to get you! There is a logical reason! 
 It didn't just magically break!
 
 ![https://www.freecodecamp.org/news/content/images/2019/07/that-string-secretly-became-a-number.jpeg](img/that-string-secretly-became-a-number.jpeg){ width=50% }

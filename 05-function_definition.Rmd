@@ -4,7 +4,7 @@
 # Check the function code
 
 If you have consulted the documentation and the internet and still have no 
-idea why your code is not doing what you expect it to do it can be 
+idea why your code is not doing what you expect it to do, it can be 
 helpful to check the function definition.
 
 You can get the code of a given function in different ways. 
@@ -19,7 +19,7 @@ There are a few things that have to be kept in mind:
 (2) can be solved by adding `packagename:::` in front of the function call.
 That way you can also explore functions that are not exported by a package.
 
-(3) Can be solved by addding the class after of the generic function.
+(3) can be solved by adding the class after the generic function.
 So if you would like to explore the `plot` method of the `bootnet` package, 
 you would have to call it as `plot.bootnet()` in order so see the definition.
 

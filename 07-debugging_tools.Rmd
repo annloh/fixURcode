@@ -28,7 +28,7 @@ You can use them in a interactive R session i.e. you can interact with your code
 - You can also change objects and continue.  
 - You can also use `browser()` as an error handler. 
 - `Browse[number]` The number tells you at which level of the call stack you are.
-- `options(error = recover)` automatically switches to browsing when an error occurs
+- `options(error = recover)` automatically switches to browsing when an error occurs.
 
 <insert screenshot of browse menu and legend>
 

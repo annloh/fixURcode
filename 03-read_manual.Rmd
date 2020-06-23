@@ -4,7 +4,7 @@
 # Read the documentation
 
 Reading documentation is a learned skill. 
-It doesn't come naturally and take a lot of time to master. 
+It doesn't come naturally and takes a lot of time to master. 
 This is not always the user's fault. 
 Also writing documentation is a skill that not all package developers master equally well.
 
@@ -16,8 +16,7 @@ Try always looking for the following elements when reading documentations.
 (4) Which object types and dimensions should the input have?
 (5) Does the input have to be named?
 
-If the documentation is unclear in these regards try inferring some of the 
+If the documentation is unclear in these regards, try inferring some of the 
 information from examples or a package vignette.
 
-If the information on a specific package is scarce. 
-Try the github search to see it in action.
+If the information on a specific package is scarce, try the github search to see it in action.

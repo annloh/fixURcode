@@ -13,4 +13,4 @@
 - You can keep track of what you already tried
 - If an attempt almost got you there and you discover the one thing that was 
 missing three hours later you can easily recreate that "95% good" state
-- When you fixed the problem you can analyse the solution by looking at what exactly was changed
+- When you fixed the problem, you can analyse the solution by looking at what exactly was changed

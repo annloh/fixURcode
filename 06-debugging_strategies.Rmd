@@ -23,8 +23,7 @@ Talk yourself through the code. (Or explain it to your rubber duck.)
 The idea of print debugging is to print certain objects or object properties 
 close to where you expect the error might occur.
 Printing might show you that an object has different properties from what you 
-would expect it to have or figure our in which iteration or with which seed 
-something might break. 
+would expect it to have or help you figure out in which iteration or with which seed something might break. 
 This is a quick and dirty option to the more elaborate debugging tools `browser()` or using a break point.
 
 ## Logging
