@@ -38,7 +38,7 @@ You might find the error in the package code or in a github issue.
 
 ### Raise warnings or messages to errors
 
-You can turn warnings and messages into errors with the foolowing code:  
+You can turn warnings and messages into errors with the following code:  
 `options(warn = 2)`
 
 Promote messages to errors:  
@@ -46,7 +46,7 @@ Promote messages to errors:
 
 ### No visible warnings or messages  
 
-If the malfunctioning code does not produce any errors or warnings check the documentation to see whether some warnings or error messages are turned off by default.
+If the malfunctioning code does not produce any errors or warnings, check the documentation to see whether some warnings or error messages are turned off by default.
 Often this is some form of `print = FALSE`, `verbose = FALSE` or `silent = TRUE`.
 
 
